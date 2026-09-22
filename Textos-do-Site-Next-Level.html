@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Textos do Site — Next Level Contabilidade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue1:#123B73; --blue2:#1976B9; --blue3:#49A9DF; --blue-soft:#EAF5FB;
+    --graphite:#252A30; --muted:#6b7280; --line:#e2e8ee;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; font-family:'Inter',sans-serif; color:var(--graphite);
+    background:#f6f8fa; line-height:1.65;
+  }
+  h1,h2,h3,h4{ font-family:'Sora',sans-serif; margin:0; }
+  .wrap{ max-width:840px; margin:0 auto; padding:0 28px 100px; }
+
+  header.doc-head{
+    background:var(--blue1); color:#fff; padding:56px 28px 44px;
+  }
+  header.doc-head .inner{ max-width:840px; margin:0 auto; }
+  header.doc-head .kicker{ font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue3); font-weight:700; margin-bottom:10px; }
+  header.doc-head h1{ font-size:clamp(26px,4vw,38px); font-weight:700; }
+  header.doc-head p{ color:#cfe0f0; max-width:600px; margin-top:12px; font-size:14px; }
+
+  .callout{
+    background:var(--blue-soft); border:1px solid #cfe4f2; border-radius:12px; padding:22px 24px; margin:36px 0;
+  }
+  .callout h4{ font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--blue1); margin-bottom:10px; }
+  .callout p, .callout li{ font-size:13.5px; color:#3a4a5c; margin:0 0 6px; }
+  .callout ul{ margin:0; padding-left:18px; }
+
+  .page-block{ margin-top:64px; }
+  .page-block > .page-tag{
+    display:inline-block; font-family:'Sora',sans-serif; font-weight:800; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:#fff; background:var(--blue2); padding:6px 14px; border-radius:20px; margin-bottom:16px;
+  }
+  .page-block > h2{ font-size:26px; color:var(--graphite); margin-bottom:6px; }
+  .page-block > .page-sub{ font-size:13px; color:var(--muted); margin-bottom:28px; }
+
+  .section{
+    background:#fff; border:1px solid var(--line); border-radius:14px; padding:26px 28px; margin-bottom:18px;
+  }
+  .section .sec-label{
+    font-family:'Inter',monospace; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--blue2); background:var(--blue-soft); display:inline-block; padding:3px 10px; border-radius:20px; margin-bottom:14px;
+  }
+  .section h3{ font-size:19px; margin-bottom:10px; color:var(--graphite); }
+  .section p{ margin:0 0 10px; font-size:14.5px; color:#3d4650; }
+  .section p:last-child{ margin-bottom:0; }
+  .section .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .section .tag-row span{
+    font-size:12px; font-weight:600; color:var(--blue1); background:var(--blue-soft); padding:5px 12px; border-radius:20px;
+  }
+  .cta{
+    display:inline-block; font-family:'Sora',sans-serif; font-weight:700; font-size:12.5px; text-transform:uppercase;
+    letter-spacing:.03em; color:#fff; background:var(--blue2); padding:10px 20px; border-radius:24px; margin-top:8px;
+  }
+  .cta.ghost{ background:#fff; color:var(--blue1); border:1.5px solid var(--blue2); }
+
+  ul.plain{ margin:0; padding-left:18px; }
+  ul.plain li{ font-size:14px; color:#3d4650; margin-bottom:6px; }
+
+  .plan-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:6px; }
+  .plan-card{ border:1px solid var(--line); border-radius:12px; padding:18px 16px; background:#fbfcfd; }
+  .plan-card h4{ font-size:15px; margin-bottom:4px; color:var(--blue1); }
+  .plan-card .plan-tag{ font-size:11.5px; color:var(--muted); margin-bottom:10px; display:block; }
+  .plan-card ul{ margin:0; padding-left:16px; }
+  .plan-card li{ font-size:12.5px; color:#3d4650; margin-bottom:4px; }
+  .plan-card .price-note{ font-size:11px; color:#b5651d; font-style:italic; margin-top:10px; }
+
+  .faq-item{ border-top:1px solid var(--line); padding:14px 0; }
+  .faq-item:first-child{ border-top:none; padding-top:0; }
+  .faq-item .q{ font-weight:700; font-size:14px; color:var(--graphite); margin-bottom:4px; }
+  .faq-item .a{ font-size:13.5px; color:#3d4650; }
+
+  .note-inline{ font-size:12px; color:#b5651d; background:#fff6ea; border:1px dashed #e9c384; border-radius:8px; padding:8px 12px; margin-top:10px; }
+
+  footer.doc-foot{ text-align:center; padding:40px 28px; color:var(--muted); font-size:12px; }
+
+  @media(max-width:640px){ .plan-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="inner">
+    <div class="kicker">Textos para o site · 4 páginas</div>
+    <h1>Textos do Site — Next Level Contabilidade</h1>
+    <p>Conteúdo proposto para o novo site, com base no alinhamento de escopo realizado com a Eduarda em 21/09/2026. Este documento traz apenas o texto — o visual do site começa depois da aprovação do manual de marca.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="callout">
+    <h4>Como usar este documento</h4>
+    <ul>
+      <li>O texto está organizado por página e por bloco (seção), na ordem em que apareceria no site.</li>
+      <li>Trechos marcados como <b>[a confirmar]</b> dependem de informações que ainda estão em revisão interna (ex.: valores dos planos).</li>
+      <li>Evitamos propositalmente termos como "inteligência" e botões automatizados de "Contratar" — feedback direto da reunião, associado a golpe digital.</li>
+      <li>A página voltada ao público da área médica (especialidade do Elber) não está entre estas 4 — deve ser uma página própria, discreta, usada só em campanhas, sempre vinculada à imagem do João. Fica para uma etapa seguinte.</li>
+    </ul>
+  </div>
+
+  <!-- ============================================================ PÁGINA 1 — HOME ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Página 1</span>
+    <h2>Home</h2>
+    <div class="page-sub">Primeiro contato com quem não conhece a marca — precisa ser direto e falar a dor do público na primeira dobra.</div>
+
+    <div class="section">
+      <span class="sec-label">Primeira dobra · H1 + CTA</span>
+      <h3>Contabilidade que reduz o imposto do seu Simples Nacional</h3>
+      <p>Cuidamos da parte fiscal e tributária para você pagar menos imposto, com segurança e sem sustos — do MEI que está crescendo até a empresa já organizada no Simples Nacional.</p>
+      <span class="cta">Falar no WhatsApp</span>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">O que fazemos</span>
+      <h3>O que a Next Level faz por você</h3>
+      <ul class="plain">
+        <li>Apuração e envio de impostos em dia (DAS e demais obrigações do Simples Nacional)</li>
+        <li>Relatórios sempre atualizados — DRE, balancete e o que sua empresa precisa para decidir</li>
+        <li>Folha de pagamento e rotina trabalhista sem risco</li>
+        <li>Análise tributária para reduzir o quanto você paga de imposto, com segurança</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Diferencial</span>
+      <h3>Seu diferencial: redução de carga tributária de verdade</h3>
+      <p>Não é só fechar a folha e mandar a guia. Fazemos uma análise tributária qualificada para identificar onde sua empresa está pagando mais imposto do que deveria — inclusive créditos e valores pagos a maior no passado — e corrigimos isso com segurança, dentro da lei.</p>
+      <p>E com a reforma tributária chegando, ter um contador que entende o que está mudando no Simples Nacional faz toda a diferença para você não ser pego de surpresa.</p>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Prova social</span>
+      <h3>Quem já cresce com a gente</h3>
+      <p>Atendemos negócios que vivem o dia a dia do comércio, da indústria e dos serviços — não fórmulas genéricas de plataforma automática.</p>
+      <div class="tag-row">
+        <span>Adega</span><span>Mercado de bairro</span><span>Padaria</span><span>Holding</span><span>Cosméticos</span><span>Bar e restaurante</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Planos · teaser</span>
+      <h3>Um plano do tamanho da sua empresa</h3>
+      <p>Do básico automatizado ao acompanhamento próximo, com grupo de WhatsApp direto com quem cuida da sua contabilidade.</p>
+      <span class="cta ghost">Ver planos</span>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">CTA final</span>
+      <h3>Vamos conversar sobre a sua empresa?</h3>
+      <p>Fale agora com o time da Next Level pelo WhatsApp.</p>
+      <span class="cta">Chamar no WhatsApp</span>
+    </div>
+  </div>
+
+  <!-- ============================================================ PÁGINA 2 — SOBRE ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Página 2</span>
+    <h2>Sobre</h2>
+    <div class="page-sub">Quem é a Next Level, para quem existe e o que representa.</div>
+
+    <div class="section">
+      <span class="sec-label">Abertura</span>
+      <h3>Quem é a Next Level Contabilidade</h3>
+      <p>Pessoas, números e grandes conquistas. Somos uma contabilidade feita para quem está construindo um negócio — a adega, a padaria, o mercado de bairro, a empresa que está saindo do MEI e se organizando no Simples Nacional.</p>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Time</span>
+      <h3>Quem cuida da sua empresa</h3>
+      <p>João lidera o atendimento e acompanha de perto cada cliente. Gabriel integra o time e cuida da rotina do dia a dia com você.</p>
+      <div class="note-inline">Nota de produção: não incluir o nome ou a imagem do Elber nesta página — conflito ético entre advocacia e contabilidade, combinado na reunião. A imagem da marca deve ficar 100% vinculada ao João.</div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Missão</span>
+      <h3>Por que existimos</h3>
+      <p>Imposto e questões trabalhistas são os dois pontos que mais quebram uma empresa pequena. Por isso, existimos para cuidar bem do primeiro: reduzir sua carga tributária de forma segura e qualificada, sem prometer milagre.</p>
+      <div class="tag-row">
+        <span>Confiança</span><span>Proximidade</span><span>Segurança</span><span>Crescimento junto com o cliente</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ PÁGINA 3 — SERVIÇOS / PLANOS ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Página 3</span>
+    <h2>Serviços e Planos</h2>
+    <div class="page-sub">O que está incluso, os três planos e para quem é cada um.</div>
+
+    <div class="section">
+      <span class="sec-label">Abertura</span>
+      <h3>Como podemos cuidar da sua empresa</h3>
+      <p>Trabalhamos principalmente com empresas do Simples Nacional e, quando necessário, do Lucro Presumido — do MEI que está crescendo até o negócio já estruturado.</p>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Incluso em todos os planos</span>
+      <h3>O básico, bem feito</h3>
+      <ul class="plain">
+        <li>Apuração e envio de guias de impostos (DAS e demais obrigações)</li>
+        <li>Emissão de relatórios (DRE, balancete)</li>
+        <li>Rotina de folha de pagamento</li>
+        <li>Análise tributária para redução de impostos e recuperação de créditos</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Planos</span>
+      <h3>Escolha o nível de acompanhamento</h3>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <h4>Bronze</h4>
+          <span class="plan-tag">Para quem quer o essencial resolvido</span>
+          <ul>
+            <li>Envio automático de documentos e apuração dos impostos</li>
+            <li>Atendimento por canais digitais, sem consultoria aprofundada</li>
+            <li>Ideal para quem está começando a se organizar</li>
+          </ul>
+          <div class="price-note">[valor a confirmar]</div>
+        </div>
+        <div class="plan-card">
+          <h4>Prata</h4>
+          <span class="plan-tag">Para quem já precisa de mais suporte</span>
+          <ul>
+            <li>Tudo do plano Bronze</li>
+            <li>Atendimento mais próximo para dúvidas do dia a dia</li>
+          </ul>
+          <div class="price-note">[valor a confirmar]</div>
+        </div>
+        <div class="plan-card">
+          <h4>Ouro</h4>
+          <span class="plan-tag">Para quem quer uma assessoria de verdade</span>
+          <ul>
+            <li>Tudo dos planos anteriores</li>
+            <li>Grupo de WhatsApp direto com o time</li>
+            <li>Apoio na tomada de decisões do negócio</li>
+          </ul>
+          <div class="price-note">[valor a confirmar]</div>
+        </div>
+      </div>
+      <div class="note-inline">Nota de produção: nomes, composição e valores dos planos estão em revisão interna (Elber e João). O texto acima reflete o posicionamento discutido na reunião — confirmar antes de publicar.</div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Segmentos</span>
+      <h3>Empresas que atendemos</h3>
+      <div class="tag-row">
+        <span>Comércio</span><span>Indústria</span><span>Serviços</span><span>Adega</span><span>Mercado</span><span>Padaria</span><span>Holding</span><span>Cosméticos</span><span>Bar e restaurante</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Parceria</span>
+      <h3>Abertura e organização societária</h3>
+      <p>Também temos uma parceria com a RP2C para cuidar da abertura e da organização societária da sua empresa.</p>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Dúvidas frequentes · rascunho</span>
+      <h3>Perguntas frequentes</h3>
+      <div class="faq-item">
+        <div class="q">Minha empresa é pequena, mesmo assim eu preciso de contabilidade?</div>
+        <div class="a">Sim — mesmo o MEI que está crescendo em direção ao Simples Nacional se beneficia de uma contabilidade que organiza a parte fiscal e evita problemas com impostos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Vocês atendem empresas do Lucro Real?</div>
+        <div class="a">Nosso foco é Simples Nacional e, no máximo, Lucro Presumido — mas também atendemos empresas em Lucro Real.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Como funciona a troca de contador?</div>
+        <div class="a">Cuidamos de toda a migração para você, sem burocracia.</div>
+      </div>
+      <div class="note-inline">Nota de produção: perguntas de exemplo, escritas a partir do que foi discutido na reunião — validar com João/Eduarda antes de publicar, e completar com as dúvidas reais mais recebidas pelo time.</div>
+    </div>
+  </div>
+
+  <!-- ============================================================ PÁGINA 4 — CONTATO ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Página 4</span>
+    <h2>Contato</h2>
+    <div class="page-sub">Simples e direto — o canal real de atendimento é o WhatsApp.</div>
+
+    <div class="section">
+      <span class="sec-label">Abertura + CTA</span>
+      <h3>Fale com a Next Level</h3>
+      <p>Hoje nosso atendimento é feito diretamente por WhatsApp — sem robô, sem formulário automático. Fale com a gente e conte um pouco sobre sua empresa.</p>
+      <span class="cta">Chamar no WhatsApp</span>
+      <div class="note-inline">Nota de produção: evitar botões do tipo "Contratar agora" ou mecanismos automatizados — feedback direto da reunião ("dá até medo de clicar", "parece o negócio de vírus"). O CTA deve levar direto para uma conversa com o João/Gabriel.</div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Informações de contato</span>
+      <h3>Outros canais</h3>
+      <ul class="plain">
+        <li>WhatsApp: [a confirmar]</li>
+        <li>E-mail: [a confirmar]</li>
+        <li>Endereço / região de atendimento: [a confirmar]</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer class="doc-foot">Textos do Site · Next Level Contabilidade · v1 · set/2026 · Baseado no alinhamento de escopo de 21/09/2026</footer>
+
+</body>
+</html>
