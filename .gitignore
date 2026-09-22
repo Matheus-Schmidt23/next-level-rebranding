@@ -2,3 +2,6 @@
 Thumbs.db
 desktop.ini
 *.tmp
+
+# Site — versionado em repositório próprio (next-level-website)
+site/
