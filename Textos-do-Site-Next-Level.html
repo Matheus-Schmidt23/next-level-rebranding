@@ -84,27 +84,33 @@
   footer.doc-foot{ text-align:center; padding:40px 28px; color:var(--muted); font-size:12px; }
 
   @media(max-width:640px){ .plan-grid{ grid-template-columns:1fr; } }
+  table.plans{ width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  table.plans th, table.plans td{ border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  table.plans thead th{ background:var(--blue1); color:#fff; font-family:'Sora',sans-serif; }
+  table.plans tbody th{ background:var(--blue-soft); color:var(--blue1); }
+  .table-wrap{ overflow-x:auto; }
 </style>
 </head>
 <body>
 
+
 <header class="doc-head">
   <div class="inner">
-    <div class="kicker">Textos para o site · 4 páginas</div>
+    <div class="kicker">Textos do site · 5 páginas · versão final</div>
     <h1>Textos do Site — Next Level Contabilidade</h1>
-    <p>Conteúdo proposto para o novo site, com base no alinhamento de escopo realizado com a Eduarda em 21/09/2026. Este documento traz apenas o texto — o visual do site começa depois da aprovação do manual de marca.</p>
+    <p>Textos publicados no site, organizados por página e por seção, na ordem em que aparecem. Este documento acompanha a versão atual do site (pasta <b>site/</b>) e substitui o rascunho v1 feito a partir do alinhamento de escopo de 21/09/2026.</p>
   </div>
 </header>
 
 <div class="wrap">
 
   <div class="callout">
-    <h4>Como usar este documento</h4>
+    <h4>Diretrizes que continuam valendo</h4>
     <ul>
-      <li>O texto está organizado por página e por bloco (seção), na ordem em que apareceria no site.</li>
-      <li>Trechos marcados como <b>[a confirmar]</b> dependem de informações que ainda estão em revisão interna (ex.: valores dos planos).</li>
-      <li>Evitamos propositalmente termos como "inteligência" e botões automatizados de "Contratar" — feedback direto da reunião, associado a golpe digital.</li>
-      <li>A página voltada ao público da área médica (especialidade do Elber) não está entre estas 4 — deve ser uma página própria, discreta, usada só em campanhas, sempre vinculada à imagem do João. Fica para uma etapa seguinte.</li>
+      <li>Botões e CTAs levam sempre a uma conversa no WhatsApp, com o texto <b>"Atendimento pelo WhatsApp"</b>. Nada de "Contratar agora" nem de fluxos automatizados, que a reunião associou a golpe digital.</li>
+      <li>Evitar termos como "inteligência" e promessas de "mágica" na redução de impostos. A comunicação deve ser segura e técnica.</li>
+      <li>Não incluir o nome nem a imagem do Elber no site (conflito ético entre advocacia e contabilidade). A imagem da marca fica vinculada ao João.</li>
+      <li>Siglas técnicas (NCM, CFOP, IRPJ, CSLL, CNES etc.) aparecem sempre acompanhadas de explicação.</li>
     </ul>
   </div>
 
@@ -112,54 +118,49 @@
   <div class="page-block">
     <span class="page-tag">Página 1</span>
     <h2>Home</h2>
-    <div class="page-sub">Primeiro contato com quem não conhece a marca — precisa ser direto e falar a dor do público na primeira dobra.</div>
+    <div class="page-sub">index.html</div>
 
     <div class="section">
-      <span class="sec-label">Primeira dobra · H1 + CTA</span>
-      <h3>Contabilidade que reduz o imposto do seu Simples Nacional</h3>
-      <p>Cuidamos da parte fiscal e tributária para você pagar menos imposto, com segurança e sem sustos — do MEI que está crescendo até a empresa já organizada no Simples Nacional.</p>
-      <span class="cta">Falar no WhatsApp</span>
+      <span class="sec-label">Hero · kicker "Especialistas em Simples Nacional"</span>
+      <h3>Contabilidade para o pequeno empresário que quer crescer com mais eficiência</h3>
+      <p>Da rotina fiscal à análise tributária, a Next Level cuida dos números para que sua empresa tenha mais clareza, segurança e estrutura para avançar.</p>
+      <span class="cta">Fale com um especialista</span> <span class="cta ghost">Conheça nossos serviços</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">O que fazemos</span>
-      <h3>O que a Next Level faz por você</h3>
+      <span class="sec-label">Diferencial + o que fazemos · kicker "Especialização tributária"</span>
+      <h3>Mais do que cumprir obrigações. Uma contabilidade que olha para o seu negócio.</h3>
+      <p>Uma boa gestão contábil não deve se limitar à emissão de guias e ao cumprimento de obrigações. Na Next Level, analisamos a estrutura tributária da empresa para identificar oportunidades, corrigir distorções e avaliar valores que possam ter sido pagos a maior.</p>
+      <p>Esse acompanhamento se torna ainda mais relevante em um cenário de mudanças tributárias. Nosso trabalho é ajudar sua empresa a atravessar essas transformações com informação, planejamento e segurança.</p>
       <ul class="plain">
-        <li>Apuração e envio de impostos em dia (DAS e demais obrigações do Simples Nacional)</li>
-        <li>Relatórios sempre atualizados — DRE, balancete e o que sua empresa precisa para decidir</li>
-        <li>Folha de pagamento e rotina trabalhista sem risco</li>
-        <li>Análise tributária para reduzir o quanto você paga de imposto, com segurança</li>
+        <li><b>Análise tributária</b> — Avaliamos o enquadramento e a apuração da empresa em busca de oportunidades para tornar a carga tributária mais eficiente, sempre dentro da legislação.</li>
+        <li><b>Gestão fiscal</b> — Apuração de impostos, emissão de guias e acompanhamento das obrigações fiscais para manter sua empresa organizada e em conformidade.</li>
+        <li><b>Informação para decidir</b> — Relatórios contábeis, como DRE e balancete conforme o plano, que ajudam a transformar números em uma visão mais clara sobre o desempenho do negócio.</li>
+        <li><b>Gestão trabalhista</b> — Acompanhamento das rotinas de folha de pagamento e das principais obrigações trabalhistas da empresa.</li>
       </ul>
     </div>
 
     <div class="section">
-      <span class="sec-label">Diferencial</span>
-      <h3>Seu diferencial: redução de carga tributária de verdade</h3>
-      <p>Não é só fechar a folha e mandar a guia. Fazemos uma análise tributária qualificada para identificar onde sua empresa está pagando mais imposto do que deveria — inclusive créditos e valores pagos a maior no passado — e corrigimos isso com segurança, dentro da lei.</p>
-      <p>E com a reforma tributária chegando, ter um contador que entende o que está mudando no Simples Nacional faz toda a diferença para você não ser pego de surpresa.</p>
+      <span class="sec-label">Recuperação tributária</span>
+      <h3>Impostos pagos a maior podem representar recursos parados no passado da sua empresa</h3>
+      <p>Revisamos as apurações dos últimos cinco anos para identificar possíveis créditos e valores recolhidos a maior no Simples Nacional. Quando existem oportunidades de recuperação, conduzimos o processo com critério técnico, documentação e segurança.</p>
+      <span class="cta">Solicitar análise tributária</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">Prova social</span>
-      <h3>Quem já cresce com a gente</h3>
-      <p>Atendemos negócios que vivem o dia a dia do comércio, da indústria e dos serviços — não fórmulas genéricas de plataforma automática.</p>
+      <span class="sec-label">Prova social · kicker "Experiência em diferentes mercados"</span>
+      <h3>Contabilidade preparada para diferentes modelos de negócio</h3>
+      <p>Atendemos empresas do comércio, da indústria e de serviços, considerando as particularidades tributárias e operacionais de cada atividade.</p>
       <div class="tag-row">
-        <span>Adega</span><span>Mercado de bairro</span><span>Padaria</span><span>Holding</span><span>Cosméticos</span><span>Bar e restaurante</span>
+        <span>Comércio</span><span>Indústria</span><span>Serviços</span><span>Adega</span><span>Mercado</span><span>Padaria</span><span>Holding</span><span>Cosméticos</span><span>Bar e restaurante</span><span>Autopeças</span><span>Supermercados</span><span>Farmácia</span><span>Baterias</span><span>Pet shop</span><span>Posto de combustível</span>
       </div>
     </div>
 
     <div class="section">
-      <span class="sec-label">Planos · teaser</span>
-      <h3>Um plano do tamanho da sua empresa</h3>
-      <p>Do básico automatizado ao acompanhamento próximo, com grupo de WhatsApp direto com quem cuida da sua contabilidade.</p>
-      <span class="cta ghost">Ver planos</span>
-    </div>
-
-    <div class="section">
       <span class="sec-label">CTA final</span>
-      <h3>Vamos conversar sobre a sua empresa?</h3>
-      <p>Fale agora com o time da Next Level pelo WhatsApp.</p>
-      <span class="cta">Atendimento pelo WhatsApp</span>
+      <h3>Sua contabilidade está preparada para acompanhar o crescimento da sua empresa?</h3>
+      <p>Converse com a Next Level e entenda como uma gestão contábil mais próxima e estratégica pode contribuir para o próximo passo do seu negócio.</p>
+      <span class="cta">Fale com a Next Level</span>
     </div>
   </div>
 
@@ -167,152 +168,256 @@
   <div class="page-block">
     <span class="page-tag">Página 2</span>
     <h2>Sobre</h2>
-    <div class="page-sub">Quem é a Next Level, para quem existe e o que representa.</div>
+    <div class="page-sub">sobre.html</div>
 
     <div class="section">
-      <span class="sec-label">Abertura</span>
-      <h3>Quem é a Next Level Contabilidade</h3>
-      <p>Pessoas, números e grandes conquistas. Somos uma contabilidade feita para quem está construindo um negócio — a adega, a padaria, o mercado de bairro, a empresa que está saindo do MEI e se organizando no Simples Nacional.</p>
+      <span class="sec-label">Hero · kicker "Sobre a Next Level"</span>
+      <h3>Números importam. O que você constrói com eles, ainda mais.</h3>
+      <p>A Next Level nasceu para acompanhar empresários que estão levando seus negócios adiante — e precisam de uma contabilidade capaz de acompanhar essa evolução.</p>
+      <span class="cta">Conheça nossa forma de trabalhar</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">Time</span>
-      <h3>Quem cuida da sua empresa</h3>
-      <p>João lidera o atendimento e acompanha de perto cada cliente. Gabriel integra o time e cuida da rotina do dia a dia com você.</p>
-      <div class="note-inline">Nota de produção: não incluir o nome ou a imagem do Elber nesta página — conflito ético entre advocacia e contabilidade, combinado na reunião. A imagem da marca deve ficar 100% vinculada ao João.</div>
+      <span class="sec-label">Quem somos</span>
+      <h3>Crescer exige mais do que manter a contabilidade em dia</h3>
+      <p>A Next Level nasceu para atender empresas que estão evoluindo e, com isso, passam a enfrentar decisões contábeis, fiscais e tributárias cada vez mais relevantes.</p>
+      <p>Nosso foco é o Simples Nacional: atendemos desde negócios que estão deixando o MEI até empresas já estruturadas nesse regime. Também acompanhamos empresas do Lucro Presumido, além de clínicas e profissionais da área da saúde, sempre com uma atuação próxima à realidade de cada cliente.</p>
+      <p>Nosso papel é organizar a rotina contábil, oferecer informações mais claras e analisar oportunidades tributárias para que o empresário possa conduzir o crescimento do negócio com mais segurança.</p>
+      <ul class="plain">
+        <li><b>R$ 4,8 mi · Teto de faturamento do Simples Nacional</b> — Nossa atuação acompanha diferentes momentos dessa jornada: do negócio que está deixando o MEI às empresas que avançam dentro do Simples Nacional e se preparam para migrar de regime quando o crescimento pedir.</li>
+        <li><b>Gestão · Contabilidade além das obrigações</b> — Tributos, folha, demonstrações e obrigações fazem parte da rotina. Nosso trabalho é conectar essas informações a uma gestão contábil mais organizada e a decisões tributárias mais conscientes.</li>
+      </ul>
     </div>
 
     <div class="section">
-      <span class="sec-label">Missão</span>
-      <h3>Por que existimos</h3>
-      <p>Imposto e questões trabalhistas são os dois pontos que mais quebram uma empresa pequena. Por isso, existimos para cuidar bem do primeiro: reduzir sua carga tributária de forma segura e qualificada, sem prometer milagre.</p>
+      <span class="sec-label">Nosso propósito</span>
+      <h3>Fazer da contabilidade uma aliada do crescimento</h3>
+      <p>Acreditamos que a contabilidade deve ir além do cumprimento de obrigações. Ela deve ajudar o empresário a compreender melhor os números, antecipar decisões e identificar caminhos para uma gestão tributária mais eficiente.</p>
+      <p>Por isso, combinamos acompanhamento contábil, atenção à legislação e análise tributária para construir uma relação próxima e de longo prazo com cada cliente.</p>
       <div class="tag-row">
-        <span>Confiança</span><span>Proximidade</span><span>Segurança</span><span>Crescimento junto com o cliente</span>
+        <span>Confiança nas relações</span><span>Proximidade no atendimento</span><span>Segurança nas decisões</span><span>Compromisso com o crescimento do cliente</span>
       </div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">CTA final</span>
+      <h3>Uma contabilidade preparada para acompanhar seus próximos passos</h3>
+      <p>Converse com a Next Level e conheça uma forma mais próxima e estratégica de cuidar da contabilidade da sua empresa.</p>
+      <span class="cta">Fale com a Next Level</span>
     </div>
   </div>
 
-  <!-- ============================================================ PÁGINA 3 — SERVIÇOS / PLANOS ============================================================ -->
+  <!-- ============================================================ PÁGINA 3 — SERVIÇOS ============================================================ -->
   <div class="page-block">
     <span class="page-tag">Página 3</span>
-    <h2>Serviços e Planos</h2>
-    <div class="page-sub">O que está incluso, os três planos e para quem é cada um.</div>
+    <h2>Serviços e planos</h2>
+    <div class="page-sub">servicos.html · no menu: Serviços › Planos e serviços</div>
 
     <div class="section">
-      <span class="sec-label">Abertura</span>
-      <h3>Como podemos cuidar da sua empresa</h3>
-      <p>Trabalhamos principalmente com empresas do Simples Nacional e, quando necessário, do Lucro Presumido — do MEI que está crescendo até o negócio já estruturado.</p>
+      <span class="sec-label">Hero · kicker "Serviços"</span>
+      <h3>Tudo o que sua empresa precisa da contabilidade. E um pouco além.</h3>
+      <p>Contabilidade, gestão fiscal, folha, relatórios e análise tributária reunidos em uma estrutura que acompanha as necessidades de cada etapa do seu negócio.</p>
+      <span class="cta">Conheça nossos planos</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">Incluso em todos os planos</span>
-      <h3>O básico, bem feito</h3>
+      <span class="sec-label">Incluso em todos os planos · kicker "Gestão contábil completa"</span>
+      <h3>Uma estrutura contábil para cuidar da rotina e olhar além dela</h3>
+      <p>Independentemente do plano, sua empresa conta com acompanhamento das principais rotinas contábeis, fiscais e trabalhistas, além de análise tributária.</p>
       <ul class="plain">
-        <li>Apuração e envio de guias de impostos (DAS e demais obrigações)</li>
-        <li>Emissão de relatórios (DRE, balancete)</li>
-        <li>Rotina de folha de pagamento</li>
-        <li>Análise tributária para redução de impostos e recuperação de créditos</li>
+        <li><b>Gestão fiscal e tributária</b> — Apuração de impostos, emissão de guias e acompanhamento das principais obrigações fiscais da empresa.</li>
+        <li><b>Relatórios contábeis</b> — Demonstrações e relatórios, como DRE, balanço e balancete conforme o plano, que organizam as informações contábeis e ampliam a visão sobre o desempenho do negócio.</li>
+        <li><b>Folha de pagamento</b> — Acompanhamento das rotinas de folha e das principais obrigações trabalhistas da empresa.</li>
+        <li><b>Análise tributária</b> — Avaliação da estrutura tributária para identificar oportunidades de redução de impostos e possíveis créditos a recuperar.</li>
       </ul>
     </div>
 
     <div class="section">
-      <span class="sec-label">Planos</span>
-      <h3>Escolha o nível de acompanhamento</h3>
-      <div class="plan-grid">
-        <div class="plan-card">
-          <h4>Bronze</h4>
-          <span class="plan-tag">Para quem quer o essencial resolvido</span>
-          <ul>
-            <li>Envio automático de documentos e apuração dos impostos</li>
-            <li>Atendimento por canais digitais, sem consultoria aprofundada</li>
-            <li>Ideal para quem está começando a se organizar</li>
-          </ul>
-          <div class="price-note">[valor a confirmar]</div>
-        </div>
-        <div class="plan-card">
-          <h4>Prata</h4>
-          <span class="plan-tag">Para quem já precisa de mais suporte</span>
-          <ul>
-            <li>Tudo do plano Bronze</li>
-            <li>Atendimento mais próximo para dúvidas do dia a dia</li>
-          </ul>
-          <div class="price-note">[valor a confirmar]</div>
-        </div>
-        <div class="plan-card">
-          <h4>Ouro</h4>
-          <span class="plan-tag">Para quem quer uma assessoria de verdade</span>
-          <ul>
-            <li>Tudo dos planos anteriores</li>
-            <li>Grupo de WhatsApp direto com o time</li>
-            <li>Apoio na tomada de decisões do negócio</li>
-          </ul>
-          <div class="price-note">[valor a confirmar]</div>
-        </div>
+      <span class="sec-label">Planos · kicker "Planos Next Level"</span>
+      <h3>Escolha o acompanhamento adequado ao momento da sua empresa</h3>
+      <p>Nossos planos acompanham diferentes faixas de faturamento e necessidades contábeis. Compare as opções e encontre a estrutura mais adequada para o estágio atual do seu negócio.</p>
+      <div class="table-wrap">
+        <table class="plans">
+          <thead>
+            <tr><th></th><th>Bronze<br>R$ 299/mês</th><th>Prata (Recomendado)<br>R$ 499/mês</th><th>Ouro<br>R$ 699/mês</th><th>Diamante<br>R$ 999/mês</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Certificado Digital</th><td>Incluso</td><td>Incluso</td><td>Incluso</td><td>Incluso</td></tr>
+            <tr><th>Contabilidade</th><td>Completa</td><td>Completa</td><td>Completa + DRE</td><td>Completa + DRE, balanço e balancete</td></tr>
+            <tr><th>Abertura do CNPJ</th><td>R$ 990,00</td><td>R$ 990,00</td><td>R$ 990,00</td><td>R$ 990,00</td></tr>
+            <tr><th>Faturamento mensal</th><td>Até R$ 50 mil</td><td>R$ 50.001 a R$ 120 mil</td><td>R$ 120.001 a R$ 180 mil</td><td>Acima de R$ 180 mil</td></tr>
+            <tr><th>Simples Nacional</th><td>Incluso</td><td>Incluso</td><td>Incluso</td><td>Incluso</td></tr>
+            <tr><th>Folha e pró-labore inclusos</th><td>1 sócio grátis</td><td>1 sócio grátis</td><td>1 sócio grátis</td><td>2 sócios + 1 funcionário grátis</td></tr>
+            <tr><th>Assessoria para migração de regime tributário</th><td>Não incluso</td><td>Incluso</td><td>Incluso</td><td>Incluso</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="note-inline">Nota de produção: nomes, composição e valores dos planos estão em revisão interna (Elber e João). O texto acima reflete o posicionamento discutido na reunião — confirmar antes de publicar.</div>
+      <p style="margin-top:12px;">Botão de cada plano: <b>Conhecer o plano</b> (abre o WhatsApp com o nome do plano na mensagem).</p>
     </div>
 
     <div class="section">
-      <span class="sec-label">Segmentos</span>
-      <h3>Empresas que atendemos</h3>
-      <div class="tag-row">
-        <span>Comércio</span><span>Indústria</span><span>Serviços</span><span>Adega</span><span>Mercado</span><span>Padaria</span><span>Holding</span><span>Cosméticos</span><span>Bar e restaurante</span>
-      </div>
+      <span class="sec-label">Segmentos · kicker "Segmentos atendidos"</span>
+      <h3>Segmentos que já contam com a Next Level</h3>
+      <p>Cada atividade possui particularidades operacionais e tributárias. Por isso, nosso acompanhamento considera o contexto de cada empresa, seu segmento e o momento do negócio.</p>
+      <p><i>Mesma lista de segmentos da Home, exibida aqui em formato de etiquetas.</i></p>
     </div>
 
     <div class="section">
-      <span class="sec-label">Parceria</span>
-      <h3>Abertura e organização societária</h3>
-      <p>Também temos uma parceria com a RP2C para cuidar da abertura e da organização societária da sua empresa.</p>
+      <span class="sec-label">Chamada para Clínicas Médicas</span>
+      <h3>Contabilidade especializada para clínicas e profissionais da saúde</h3>
+      <p>Clínicas médicas e odontológicas têm particularidades tributárias próprias, como a equiparação hospitalar. Conheça o acompanhamento da Next Level para a área da saúde.</p>
+      <span class="cta">Conheça a contabilidade para clínicas</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">Dúvidas frequentes · rascunho</span>
+      <span class="sec-label">Parceria RP2C · kicker "Soluções complementares"</span>
+      <h3>Uma estrutura de parceiros para apoiar outras necessidades da sua empresa</h3>
+      <p>Para as demandas jurídicas de natureza societária, a Next Level conta com a parceria da RP2C, consultoria especializada em direito societário na região de Campinas.</p>
+      <p>A RP2C define a estrutura societária e elabora os atos societários da empresa, enquanto a Next Level conduz a abertura do CNPJ, os registros fiscais e a gestão contábil, com as duas frentes alinhadas desde o início.</p>
+      <p><b>Serviços oferecidos pela RP2C:</b> definição da estrutura societária na abertura da empresa; consultoria em organização e estrutura societária; planejamento de holdings, inclusive no exterior; fusões e aquisições; governança corporativa.</p>
+      <span class="cta">Falar sobre minha empresa</span> <span class="cta ghost">Conheça a RP2C</span>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Perguntas frequentes</span>
       <h3>Perguntas frequentes</h3>
-      <div class="faq-item">
-        <div class="q">Minha empresa é pequena, mesmo assim eu preciso de contabilidade?</div>
-        <div class="a">Sim — mesmo o MEI que está crescendo em direção ao Simples Nacional se beneficia de uma contabilidade que organiza a parte fiscal e evita problemas com impostos.</div>
-      </div>
-      <div class="faq-item">
-        <div class="q">Vocês atendem empresas do Lucro Real?</div>
-        <div class="a">Nosso foco é Simples Nacional e, no máximo, Lucro Presumido — mas também atendemos empresas em Lucro Real.</div>
-      </div>
-      <div class="faq-item">
-        <div class="q">Como funciona a troca de contador?</div>
-        <div class="a">Cuidamos de toda a migração para você, sem burocracia.</div>
-      </div>
-      <div class="note-inline">Nota de produção: perguntas de exemplo, escritas a partir do que foi discutido na reunião — validar com João/Eduarda antes de publicar, e completar com as dúvidas reais mais recebidas pelo time.</div>
+      <div class="faq-item"><div class="q">Minha empresa é pequena, mesmo assim eu preciso de contabilidade?</div><div class="a">Sim. Mesmo o MEI que está crescendo em direção ao Simples Nacional se beneficia de um acompanhamento contábil que organiza a rotina fiscal e reduz o risco de inconsistências na apuração de impostos.</div></div>
+      <div class="faq-item"><div class="q">Vocês atendem empresas do Lucro Real?</div><div class="a">Nosso foco é o Simples Nacional e o Lucro Presumido, mas também atendemos empresas enquadradas no Lucro Real.</div></div>
+      <div class="faq-item"><div class="q">Como funciona a troca de contador?</div><div class="a">A Next Level conduz a transição junto ao contador anterior, organizando a transferência das informações e da documentação da empresa para que a rotina contábil tenha continuidade.</div></div>
+      <div class="faq-item"><div class="q">Preciso de um contador para a minha empresa?</div><div class="a">Se você é MEI, a contratação de um contador não é obrigatória. Já as demais empresas, inclusive as do Simples Nacional, precisam manter a escrituração contábil regular, com balanço e demonstrações assinados por um contador registrado no CRC (Conselho Regional de Contabilidade). Além disso, o contador cuida da apuração dos impostos, da folha de pagamento e das obrigações acessórias, reduzindo o risco de erros, multas e pendências com o Fisco.</div></div>
+      <div class="faq-item"><div class="q">O que faz um escritório de contabilidade como a Next Level?</div><div class="a">Além da abertura de empresas, acompanhamos a regularidade do CNPJ junto à Receita Federal. Por meio de análises financeiras e patrimoniais, mantemos a empresa em dia com obrigações fiscais (impostos), contábeis (balanços e DRE) e trabalhistas (folha de pagamento e pró-labore), entre outras. Um trabalho contábil criterioso busca assegurar que os valores declarados correspondam às entradas e saídas financeiras reais da empresa.</div></div>
+      <div class="faq-item"><div class="q">Como funciona a abertura de empresa sem sair de casa?</div><div class="a">Com a tecnologia disponível hoje, realizamos a abertura da sua empresa à distância — incluindo o estudo de viabilidade do local. Quando necessário, contamos com escritórios em vários estados do Brasil, o que permite emitir notas fiscais e aproveitar a logística de marketplaces e incentivos fiscais estaduais, sem a necessidade de se mudar ou contratar funcionários no local. Os documentos são enviados até você: basta assinar com certificado digital ou, quando o órgão exigir assinatura física, reconhecer firma em cartório e nos enviar digitalizados, sem precisar se deslocar até a Next Level.</div></div>
+      <div class="faq-item"><div class="q">Quais taxas preciso pagar para abrir uma empresa?</div><div class="a">Os custos iniciais mais comuns são o DARE (Documento de Arrecadação de Receitas Estaduais) e o DARF (Documento de Arrecadação de Receitas Federais), além das taxas da Junta Comercial e de taxas municipais, que variam conforme o segmento e a localização. O certificado digital já está incluso em todos os planos da Next Level. Dependendo da atividade, também pode haver taxas específicas de Prefeitura, Vigilância Sanitária, Corpo de Bombeiros, cartório e conselhos profissionais. A Next Level levanta os valores corretos para o seu caso.</div></div>
+      <div class="faq-item"><div class="q">Quanto custa o serviço de folha de pagamento?</div><div class="a">Cada plano já inclui a folha e o pró-labore de um número definido de pessoas: 1 sócio nos planos Bronze, Prata e Ouro, e 2 sócios e 1 funcionário no Diamante. Cada funcionário ou sócio além disso custa R$ 50,00 por mês.</div></div>
+      <div class="faq-item"><div class="q">Por que sou obrigado a usar o Certificado Digital?</div><div class="a">O Certificado Digital é fundamental para a empresa assinar documentos e realizar transações online. Sem essa ferramenta, não é possível emitir Nota Fiscal — o que pode gerar prejuízo direto no faturamento. Por isso, ele já está incluso em todos os planos da Next Level.</div></div>
+      <div class="faq-item"><div class="q">Por que os planos têm valores diferentes?</div><div class="a">Conforme o faturamento da empresa aumenta, cresce também a necessidade de uma contabilidade mais presente no dia a dia, para orientar em situações como a classificação fiscal dos produtos (NCM), a emissão de nota fiscal e o código de cada tipo de operação (CFOP), entre outras. Buscamos sempre equilibrar um valor justo com um trabalho de qualidade, comprometido com o crescimento da sua empresa.</div></div>
+      <div class="faq-item"><div class="q">O que é a assessoria tributária para migração de regime?</div><div class="a">Muitas empresas do Simples Nacional acabam pagando mais imposto do que deveriam, por falta de acompanhamento próximo da tributação — que aumenta conforme o faturamento cresce. Além disso, o Simples Nacional tem um limite de receita anual: ao ultrapassá-lo, a empresa é obrigada a migrar para o Lucro Real ou o Lucro Presumido. Por isso, acompanhamos o faturamento da sua empresa para recomendar, no momento certo, a mudança de regime tributário mais eficiente — aproveitando os benefícios fiscais que esses regimes podem oferecer.</div></div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">CTA final</span>
+      <h3>Encontre a estrutura contábil adequada para o momento da sua empresa</h3>
+      <p>Converse com a Next Level para entender qual plano e nível de acompanhamento fazem mais sentido para a realidade do seu negócio.</p>
+      <span class="cta">Fale com a Next Level</span>
     </div>
   </div>
 
-  <!-- ============================================================ PÁGINA 4 — CONTATO ============================================================ -->
+  <!-- ============================================================ PÁGINA 4 — CLÍNICAS MÉDICAS ============================================================ -->
   <div class="page-block">
     <span class="page-tag">Página 4</span>
-    <h2>Contato</h2>
-    <div class="page-sub">Simples e direto — o canal real de atendimento é o WhatsApp.</div>
+    <h2>Clínicas Médicas</h2>
+    <div class="page-sub">clinicas-medicas.html · no menu: Serviços › Clínicas Médicas</div>
 
     <div class="section">
-      <span class="sec-label">Abertura + CTA</span>
-      <h3>Fale com a Next Level</h3>
-      <p>Hoje nosso atendimento é feito diretamente por WhatsApp — sem robô, sem formulário automático. Fale com a gente e conte um pouco sobre sua empresa.</p>
-      <span class="cta">Atendimento pelo WhatsApp</span>
-      <div class="note-inline">Nota de produção: evitar botões do tipo "Contratar agora" ou mecanismos automatizados — feedback direto da reunião ("dá até medo de clicar", "parece o negócio de vírus"). O CTA deve levar direto para uma conversa com o João/Gabriel.</div>
+      <span class="sec-label">Hero · kicker "Contabilidade para a área da saúde"</span>
+      <h3>Sua clínica pode estar deixando dinheiro na mesa</h3>
+      <p>Uma análise tributária especializada pode identificar oportunidades relacionadas ao enquadramento da clínica, à equiparação hospitalar e a valores eventualmente pagos a maior.</p>
+      <span class="cta">Solicitar análise tributária</span> <span class="cta ghost">Entenda os requisitos</span>
     </div>
 
     <div class="section">
-      <span class="sec-label">Informações de contato</span>
-      <h3>Outros canais</h3>
+      <span class="sec-label">Equiparação hospitalar</span>
+      <h3>Sua clínica pode ter uma estrutura tributária mais eficiente</h3>
+      <p>No Lucro Presumido, determinados serviços prestados por clínicas médicas e odontológicas podem receber tratamento tributário aplicável aos serviços hospitalares, desde que sejam atendidos os requisitos previstos para esse enquadramento.</p>
+      <p>Quando aplicável, a equiparação hospitalar altera as bases de cálculo utilizadas para o IRPJ (Imposto de Renda da Pessoa Jurídica) e a CSLL (Contribuição Social sobre o Lucro Líquido). Por isso, a análise deve considerar tanto a natureza dos serviços prestados quanto a estrutura jurídica e as condições da clínica.</p>
       <ul class="plain">
-        <li>WhatsApp: [a confirmar]</li>
-        <li>E-mail: [a confirmar]</li>
-        <li>Endereço / região de atendimento: [a confirmar]</li>
+        <li><b>32% → 8% · Base de cálculo do IRPJ</b> — Para os serviços hospitalares, a base de cálculo do IRPJ passa de 32% para 8% da receita.</li>
+        <li><b>32% → 12% · Base de cálculo da CSLL</b> — Para os serviços hospitalares, a base de cálculo da CSLL passa de 32% para 12% da receita.</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Requisitos · kicker "Análise de enquadramento"</span>
+      <h3>A equiparação hospitalar se aplica à sua clínica?</h3>
+      <p>O enquadramento depende das características da atividade e do atendimento aos requisitos aplicáveis. Por isso, antes de qualquer mudança, analisamos a situação da clínica para verificar se existem condições para utilizar esse tratamento tributário.</p>
+      <p><b>Principais requisitos:</b></p>
+      <ul class="plain">
+        <li>Prestar serviços hospitalares, como cirurgias, exames e procedimentos, e não exclusivamente consultas.</li>
+        <li>Estar constituída como sociedade empresária e registrada na Junta Comercial.</li>
+        <li>Estar enquadrada no regime do Lucro Presumido.</li>
+        <li>Atender às normas aplicáveis da Anvisa e da vigilância sanitária.</li>
+      </ul>
+      <span class="cta">Analisar minha clínica</span>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Serviços para a área médica · kicker "Contabilidade especializada em saúde"</span>
+      <h3>Uma estrutura contábil preparada para a rotina de médicos e clínicas</h3>
+      <p>Atendemos médicos, profissionais autônomos, recém-formados, plantonistas, consultórios e clínicas com serviços contábeis e tributários adequados às diferentes etapas da atividade profissional.</p>
+      <ul class="plain">
+        <li><b>Planejamento tributário</b> — Análise do regime tributário, equiparação hospitalar quando aplicável e identificação de possíveis valores pagos a maior.</li>
+        <li><b>Livro-caixa</b> — Organização mensal das receitas e despesas do profissional autônomo para uma apuração tributária adequada à sua atividade.</li>
+        <li><b>Regularização da clínica</b> — Acompanhamento de alvará de funcionamento, vigilância sanitária, CNES (Cadastro Nacional de Estabelecimentos de Saúde), registro no CRM e demais licenças já contempladas pelo serviço.</li>
+        <li><b>Imposto de Renda</b> — Acompanhamento contábil para a elaboração da declaração de Imposto de Renda do profissional da saúde, considerando as informações da sua atividade.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Perguntas frequentes</span>
+      <h3>Perguntas frequentes</h3>
+      <div class="faq-item"><div class="q">O que é a equiparação hospitalar?</div><div class="a">É o tratamento tributário aplicável a determinados serviços hospitalares no Lucro Presumido. Clínicas que atendem aos requisitos podem utilizar bases de cálculo de 8% para o IRPJ e 12% para a CSLL, em vez dos 32% aplicáveis aos serviços em geral.</div></div>
+      <div class="faq-item"><div class="q">Minha clínica precisa ter internação para se enquadrar?</div><div class="a">A natureza dos serviços prestados é um dos elementos relevantes para a análise, incluindo procedimentos, cirurgias e exames. Consultas médicas isoladas não fazem parte desse benefício. O enquadramento deve ser analisado de acordo com as características da clínica.</div></div>
+      <div class="faq-item"><div class="q">Posso recuperar o imposto que já paguei a maior?</div><div class="a">Analisamos os valores recolhidos nos últimos cinco anos para identificar possíveis pagamentos a maior. A Next Level realiza esse levantamento para verificar a existência de valores passíveis de recuperação.</div></div>
+      <div class="faq-item"><div class="q">Atendem médicos que ainda não têm clínica?</div><div class="a">Sim. A Next Level também atende médicos autônomos, recém-formados e plantonistas, com serviços como livro-caixa, abertura de empresa, certificado digital e declaração de Imposto de Renda.</div></div>
+      <div class="faq-item"><div class="q">Por que preciso de certificado digital?</div><div class="a">O certificado digital é utilizado em diferentes processos e obrigações eletrônicas da empresa, incluindo procedimentos relacionados à emissão de documentos fiscais e ao relacionamento com órgãos públicos. Para clientes dos planos da Next Level, o certificado digital já está incluso.</div></div>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">CTA final</span>
+      <h3>Sua clínica pode ter oportunidades tributárias ainda não identificadas</h3>
+      <p>Converse com a Next Level para analisar a estrutura tributária da sua clínica e verificar quais possibilidades são aplicáveis à sua realidade.</p>
+      <span class="cta">Solicitar análise tributária</span>
+    </div>
+  </div>
+
+  <!-- ============================================================ PÁGINA 5 — CONTATO ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Página 5</span>
+    <h2>Contato</h2>
+    <div class="page-sub">contato.html</div>
+
+    <div class="section">
+      <span class="sec-label">Hero · kicker "Contato"</span>
+      <h3>Vamos falar sobre a sua empresa?</h3>
+      <p>Conte para a Next Level em que momento o seu negócio está. Nosso atendimento é direto pelo WhatsApp para entender sua necessidade e orientar os próximos passos.</p>
+      <span class="cta">Iniciar conversa pelo WhatsApp</span>
+    </div>
+
+    <div class="section">
+      <span class="sec-label">Canais de atendimento</span>
+      <h3>Escolha a melhor forma de falar conosco</h3>
+      <ul class="plain">
+        <li><b>WhatsApp:</b> (19) 98287-4127</li>
+        <li><b>E-mail:</b> contato@nextlevelcontabilidade.com.br</li>
+        <li><b>Endereço:</b> Rua Rafael Andrade Duarte, 452 — Nova Campinas, Campinas – SP, 13092-180</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================================================ ELEMENTOS COMUNS ============================================================ -->
+  <div class="page-block">
+    <span class="page-tag">Todas as páginas</span>
+    <h2>Elementos comuns</h2>
+    <div class="page-sub">Cabeçalho, rodapé e botão flutuante</div>
+
+    <div class="section">
+      <span class="sec-label">Menu</span>
+      <p>Home · Sobre · Serviços (Planos e serviços / Clínicas Médicas) · Contato · botão <b>Atendimento pelo WhatsApp</b></p>
+    </div>
+    <div class="section">
+      <span class="sec-label">Rodapé</span>
+      <p>Contabilidade estratégica para empresas que estão crescendo e precisam de mais segurança para tomar decisões.</p>
+      <p>© 2026 Next Level Contabilidade. Todos os direitos reservados. · Contabilidade para o próximo nível do seu negócio.</p>
+    </div>
+    <div class="section">
+      <span class="sec-label">Botão flutuante</span>
+      <p>Atendimento pelo WhatsApp</p>
     </div>
   </div>
 
 </div>
 
-<footer class="doc-foot">Textos do Site · Next Level Contabilidade · v1 · set/2026 · Baseado no alinhamento de escopo de 21/09/2026</footer>
+<footer class="doc-foot">Textos do Site · Next Level Contabilidade · versão final · set/2026</footer>
 
 </body>
 </html>
