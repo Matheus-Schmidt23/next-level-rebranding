@@ -21,6 +21,38 @@
   }
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
+
+  body.locked > *:not(#login-gate){ display:none !important; }
+  #login-gate{
+    display:none; position:fixed; inset:0; z-index:9999; padding:24px;
+    align-items:center; justify-content:center;
+    background:linear-gradient(135deg, #123B73 0%, #17538f 45%, #1976B9 100%);
+  }
+  body.locked #login-gate{ display:flex; }
+  .login-box{
+    background:#fff; border-radius:16px; padding:40px 36px; max-width:340px; width:100%; text-align:center;
+    box-shadow:0 24px 60px rgba(0,0,0,.35);
+  }
+  .login-kicker{
+    font-family:'Sora',sans-serif; font-weight:700; font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+    color:#1976B9; margin-bottom:10px;
+  }
+  .login-box h2{ font-family:'Sora',sans-serif; font-size:21px; font-weight:700; color:#252A30; margin:0 0 10px; }
+  .login-box p{ font-family:'Inter',sans-serif; font-size:13px; color:#6b7280; margin:0 0 22px; line-height:1.5; }
+  .login-box input{
+    width:100%; padding:12px 14px; border:1px solid #e2e8f0; border-radius:10px; font-size:14px;
+    font-family:'Inter',sans-serif; margin-bottom:14px; box-sizing:border-box;
+  }
+  .login-box input:focus{ outline:none; border-color:#1976B9; }
+  .login-box button{
+    width:100%; padding:12px; border:none; border-radius:10px; background:#1976B9; color:#fff;
+    font-family:'Sora',sans-serif; font-weight:700; font-size:14px; cursor:pointer; transition:background .2s ease;
+  }
+  .login-box button:hover{ background:#123B73; }
+  .login-error{
+    display:none; color:#c0392b; font-family:'Inter',sans-serif; font-size:12.5px; margin-top:14px;
+  }
+  .login-error.show{ display:block; }
   body{
     margin:0; padding:0;
     font-family:'Inter',sans-serif;
@@ -328,7 +360,8 @@
     @page{ size:landscape; margin:0; }
     *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
     html, body{ background:#fff; }
-    nav, .scroll-cue{ display:none !important; }
+    nav, .scroll-cue, #login-gate{ display:none !important; }
+    body.locked > *{ display:block !important; }
     .reveal{ opacity:1 !important; transform:none !important; }
     section{
       page-break-after:always; break-after:page; page-break-inside:avoid;
@@ -347,7 +380,23 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
+<script>
+  if (sessionStorage.getItem('nl_unlocked') === '1') {
+    document.body.classList.remove('locked');
+  }
+</script>
+
+<div id="login-gate">
+  <form class="login-box" id="loginForm" autocomplete="off">
+    <div class="login-kicker">Acesso restrito</div>
+    <h2>Manual de Marca</h2>
+    <p>Este material é de uso interno da Next Level Contabilidade. Digite a senha para continuar.</p>
+    <input type="password" id="loginPass" placeholder="Senha" autocomplete="new-password" required>
+    <button type="submit">Entrar</button>
+    <div class="login-error" id="loginError">Senha incorreta. Tente novamente.</div>
+  </form>
+</div>
 
 <nav>
   <span class="brand"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJDYW1hZGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTA4MCAzMjkuMjYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMWIzZTczO308L3N0eWxlPjwvZGVmcz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMzg2LjEzIDEzNS40MiAzNDMuMDEgMTkzLjE5IDMwMi41NiAxOTMuMTUgMzMzLjcgMTQ4LjY3IDIzMi45IDE0OC42MSAyMzIuODIgMTY0LjQzIDI5NS40NiAxNjQuNDIgMjk1LjQzIDE5My4xOCAxOTcuNTMgMTkzLjE4IDE5Ny41NCA3Ny40MyAyOTYuODUgNzcuNDMgMjk2Ljg3IDEwNC43MiAyMzIuODQgMTA0LjcyIDIzMi44NyAxMTkuNzIgMzMzLjgzIDExOS43IDMwNS4xNCA3Ny41NCAzNDQuNzcgNzcuNTEgMzgwIDEyNi41NiAzODYuMTMgMTM1LjQyIi8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjE4Ni4wMSAxOTMuMTQgMTUwLjU2IDE5My4xOSAxMDUuOTEgMTMwLjc2IDEwNS43NyAxOTMuMTkgNzAuMzUgMTkzLjE4IDcwLjM2IDc3LjU1IDEwNy43MyA3Ny40NyAxNDkuNjMgMTM2LjA4IDE0OS43NCA3Ny40MSAxODYuMDEgNzcuNDMgMTg2LjAxIDE5My4xNCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI4MDEuOTUgMTM0LjYyIDgzNy4yNSAxMzQuNTkgODA5Ljk5IDIwMS43NCA3ODkuNjUgMjUxLjc4IDc0OS4yNiAyNTEuODIgNzEzLjQxIDE1Ny44OCA3MDQuNDggMTM0LjU1IDc0MC43NCAxMzQuNTQgNzUxLjU0IDE2Ni4xNiA3NjkuODIgMjE5Ljk2IDc5MC40NCAxNjQuODUgODAxLjk1IDEzNC42MiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI5MTcuMDYgMjAzLjgxIDg3NS4yNiAyMDMuODQgODc1LjE3IDIyNy4wNCA5MjEuMzUgMjI3LjAyIDkyMS4zOSAyNTEuODIgODQxLjU0IDI1MS44MSA4NDEuNTMgMTM0LjYgOTIxLjU2IDEzNC41OCA5MjEuNjMgMTU5LjI0IDg3NS4xOSAxNTkuMjUgODc1LjIgMTgwLjAzIDkxNy4xIDE4MC4wNSA5MTcuMDYgMjAzLjgxIi8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY5Ni42MyAyMDMuOTEgNjU0LjU4IDIwMy45IDY1NC41MiAyMjcuMDIgNzAwLjc4IDIyNy4wNSA3MDAuOTEgMjUxLjggNjIwLjk1IDI1MS44MSA2MjAuOTMgMTM0LjU5IDcwMC44OSAxMzQuNTkgNzAwLjk3IDE1OS4yNCA2NTQuNjMgMTU5LjI0IDY1NC41MiAxODAuMDIgNjk2LjYzIDE4MCA2OTYuNjMgMjAzLjkxIi8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjUwMy42OSAxOTMuMTYgNDY4LjE5IDE5My4xOCA0NjguMiAxMDcuNjIgNDM2LjYgMTA3LjU3IDQzNi42MSA3Ny40IDUzOC4wNSA3Ny40MSA1MzguMDUgMTA3LjU3IDUwMy43IDEwNy41OCA1MDMuNjkgMTkzLjE2Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjEwMDkuNjIgMjI3Ljk2IDEwMDkuNjUgMjUxLjg0IDkzNS40MiAyNTEuODIgOTM1LjQgMTM0LjYgOTY5LjM5IDEzNC41OCA5NjkuMzggMjI4IDEwMDkuNjIgMjI3Ljk2Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjYwNS4wMyAyMjguMDEgNjA1LjExIDI1MS44NSA1MzEuMiAyNTEuODEgNTMxLjIxIDEzNC42NSA1NjUuMTIgMTM0LjYxIDU2NS4xNCAyMjggNjA1LjAzIDIyOC4wMSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIzODYuNjggMTkzLjA5IDM3MS4yMSAxNzIuMDUgMzkyLjE4IDE0NC4wNCA0MjcuNzkgMTkzLjA0IDM4Ni42OCAxOTMuMDkiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMzkyLjE2IDEyNS45OSAzNzIuMjIgOTkuMTggMzg3LjkzIDc3LjUzIDQyOC45OCA3Ny41MSAzOTIuMTYgMTI1Ljk5Ii8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzcwLjA5LDIyMi45NWgtNi4yNHYxOC4zaDYuMjRjNS44NiwwLDkuNy0zLjUsOS43LTkuMTVzLTMuODQtOS4xNS05LjctOS4xNVoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yNjkuNTIsMjM0LjQyaC03Ljk3djcuM2g3Ljk3YzMuNTQsMCw1LjQ0LTEuMSw1LjQ0LTMuNjNzLTEuOS0zLjY3LTUuNDQtMy42N1oiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjI2LjE3IDIzNS4zNSAyMzUuNTMgMjM1LjM1IDIzMC44NSAyMjQuMDUgMjI2LjE3IDIzNS4zNSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI0MDMuNTcgMjM1LjM1IDQxMi45MyAyMzUuMzUgNDA4LjI1IDIyNC4wNSA0MDMuNTcgMjM1LjM1Ii8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjczLjQ5LDIyNS45NGMwLTIuMzItMS44MS0zLjQ2LTUuMTUtMy40NmgtNi43OXY2Ljk2aDYuNzljMy4zMywwLDUuMTUtMS4xOCw1LjE1LTMuNVoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMjUuNjQsMjIyLjY2Yy01LjI3LDAtOS4yNCwzLjg0LTkuMjQsOS40NXMzLjk2LDkuNDUsOS4yNCw5LjQ1LDkuMjQtMy44NCw5LjI0LTkuNDUtMy45Ni05LjQ1LTkuMjQtOS40NVoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03MC4zNSwyMTQuMzR2MzUuMzloNDMwLjI3di0zNS4zOUg3MC4zNVpNOTEuMzYsMjQxLjU1YzIuOTUsMCw1LjQ0LTEuMTgsNy40Mi0zLjVsNC4zOSw0LjA1Yy0yLjc4LDMuNDItNy4wNCw1LjI3LTEyLjE5LDUuMjctOS4xNSwwLTE1Ljk4LTYuMzctMTUuOTgtMTUuMjdzNi44My0xNS4yNywxNi4wMy0xNS4yN2M1LjEsMCw5LjM2LDEuODYsMTIuMTUsNS4yM2wtNC4zOSw0LjA1Yy0xLjk4LTIuMjgtNC40Ny0zLjQ2LTcuNDItMy40Ni01LjUyLDAtOS40NSwzLjg4LTkuNDUsOS40NXMzLjkyLDkuNDUsOS40NSw5LjQ1Wk0xMjUuNjQsMjQ3LjM3Yy05LjMyLDAtMTYuMTUtNi40OS0xNi4xNS0xNS4yN3M2LjgzLTE1LjI3LDE2LjE1LTE1LjI3LDE2LjE1LDYuNDUsMTYuMTUsMTUuMjctNi44OCwxNS4yNy0xNi4xNSwxNS4yN1pNMTc4LjIzLDI0Ni44NmgtNS42MWwtMTQuNzItMTcuOTJ2MTcuOTJoLTYuNzV2LTI5LjUyaDUuNjVsMTQuNjgsMTcuOTJ2LTE3LjkyaDYuNzV2MjkuNTJaTTIxMS44NCwyMjIuOTFoLTkuNDV2MjMuOTZoLTYuODN2LTIzLjk2aC05LjQ1di01LjU3aDI1LjczdjUuNTdaTTI0MC4zLDI0Ni44NmwtMi42Mi02LjMzaC0xMy43MWwtMi42Miw2LjMzaC03bDEzLjE2LTI5LjUyaDYuNzVsMTMuMiwyOS41MmgtNy4xN1pNMjcwLjAzLDI0Ni44NmgtMTUuMjd2LTI5LjUyaDE0LjQyYzcuMzgsMCwxMS4xOCwzLjA4LDExLjE4LDcuNjgsMCwyLjk1LTEuNTIsNS4yMy0zLjkyLDYuNSwzLjI5LDEuMDUsNS40LDMuNTgsNS40LDcuMywwLDUuMS00LjA1LDguMDYtMTEuODEsOC4wNlpNMjk4LjA3LDI0Ni44NmgtNi44M3YtMjkuNTJoNi44M3YyOS41MlpNMzMwLjkyLDI0Ni44NmgtMjEuNjR2LTI5LjUyaDYuODN2MjMuOTZoMTQuOHY1LjU3Wk0zNDUuOCwyNDYuODZoLTYuODN2LTI5LjUyaDYuODN2MjkuNTJaTTM3MC40MywyNDYuODZoLTEzLjQxdi0yOS41MmgxMy40MWM5LjY2LDAsMTYuMjgsNS44MiwxNi4yOCwxNC43NnMtNi42MiwxNC43Ni0xNi4yOCwxNC43NlpNNDE3LjcsMjQ2Ljg2bC0yLjYyLTYuMzNoLTEzLjcxbC0yLjYyLDYuMzNoLTdsMTMuMTYtMjkuNTJoNi43NWwxMy4yLDI5LjUyaC03LjE3Wk00NDUuNTcsMjQ2Ljg2aC0xMy40MXYtMjkuNTJoMTMuNDFjOS42NiwwLDE2LjI4LDUuODIsMTYuMjgsMTQuNzZzLTYuNjIsMTQuNzYtMTYuMjgsMTQuNzZaTTQ5NC4wNiwyNDYuODZoLTIyLjg2di0yOS41MmgyMi4zMXY1LjQ4aC0xNS41MnY2LjQxaDEzLjcxdjUuMzFoLTEzLjcxdjYuODNoMTYuMDd2NS40OFoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik00NDUuMjMsMjIyLjk1aC02LjI0djE4LjNoNi4yNGM1Ljg2LDAsOS43LTMuNSw5LjctOS4xNXMtMy44NC05LjE1LTkuNy05LjE1WiIvPjwvc3ZnPg==" alt="Next Level Contabilidade"></span>
@@ -660,6 +709,25 @@
 <div class="toast" id="toast">Código copiado!</div>
 
 <script>
+  // Login gate
+  const loginForm = document.getElementById('loginForm');
+  const loginPass = document.getElementById('loginPass');
+  const loginError = document.getElementById('loginError');
+  const SITE_PASSWORD = 'next2026';
+  loginForm.addEventListener('submit', (ev)=>{
+    ev.preventDefault();
+    if(loginPass.value === SITE_PASSWORD){
+      sessionStorage.setItem('nl_unlocked', '1');
+      document.body.classList.remove('locked');
+      loginError.classList.remove('show');
+      window.dispatchEvent(new Event('resize'));
+    } else {
+      loginError.classList.add('show');
+      loginPass.value = '';
+      loginPass.focus();
+    }
+  });
+
   // Nav height -> offsets the sticky subnav below it
   const mainNav = document.querySelector('nav:not(.subnav)');
   function syncNavHeight(){
