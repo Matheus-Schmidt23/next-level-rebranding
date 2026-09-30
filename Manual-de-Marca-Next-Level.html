@@ -410,11 +410,12 @@
   .kv-zoom:hover .kv-hint{ opacity:1; transform:translateY(0); }
 
   /* ---------- Marcas alternativas ---------- */
-  .alt-item{ padding:80px 0; scroll-margin-top:calc(var(--nav-h, 64px) + 44px); }
+  .alt-item{ padding:104px 0; scroll-margin-top:calc(var(--nav-h, 64px) + 44px); }
+  .alt-item .kv-head{ width:86%; margin-bottom:26px; }
   .alt-item.kv-dark{ background:#1c2126; }
   .alt-item.kv-dark .alt-note{ color:#9aa5b1; }
   .alt-row{
-    display:grid; grid-template-columns:36% 57%; justify-content:center; gap:3%; align-items:stretch;
+    display:grid; grid-template-columns:32% 51%; justify-content:center; gap:3%; align-items:stretch;
   }
   .alt-row > *{ min-width:0; }
   .alt-logos{ display:grid; grid-template-rows:minmax(0,1.55fr) minmax(0,1fr); gap:16px; contain:size; }
@@ -473,6 +474,8 @@
     .kv-spec{ margin-left:0; width:100%; }
     .lightbox{ padding:56px 12px; }
     .alt-row{ grid-template-columns:1fr; gap:16px; width:93%; margin:0 auto; }
+    .alt-item{ padding:72px 0; }
+    .alt-item .kv-head{ width:93%; }
     .alt-logos{ grid-template-rows:none; grid-template-columns:1fr 1fr; contain:none; }
     .alt-logo{ aspect-ratio:4/3; }
   }
