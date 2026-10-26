@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
 <title>Next Level Contabilidade - Capa LinkedIn (perfil pessoal) 1584 x 396 px</title>
-<desc>Área livre à esquerda (até ~440 px) reservada para a foto de perfil. Fonte: Montserrat.</desc>
+<desc>Grafismo: seta da pasta com bolsa (polígono e cores do arquivo de impressão). Área livre à esquerda (até ~440 px) reservada para a foto de perfil. Fonte: Montserrat.</desc>
 <style>text{font-family:Montserrat,'Segoe UI',Arial,sans-serif}</style>
 <defs><clipPath id="bn"><rect width="1584" height="396"/></clipPath></defs>
 <g clip-path="url(#bn)">
   <rect width="1584" height="396" fill="#333E5B"/>
-  <!-- grafismo: seta do logotipo em tom sobre tom -->
-  <polygon transform="translate(-150 -30) scale(2.4) translate(-765.38 -34.71)" points="803.78 224.51 766.87 188.68 826.34 127.76 765.38 68.26 798.09 34.71 823.43 59.16 895.99 130.02 803.78 224.51" fill="#2B3247" fill-opacity="0.9"/>
-  <polygon transform="translate(20 -30) scale(2.4) translate(-765.38 -34.71)" points="803.78 224.51 766.87 188.68 826.34 127.76 765.38 68.26 798.09 34.71 823.43 59.16 895.99 130.02 803.78 224.51" fill="#546CA5"/>
-  <polygon transform="translate(190 -30) scale(2.4) translate(-765.38 -34.71)" points="803.78 224.51 766.87 188.68 826.34 127.76 765.38 68.26 798.09 34.71 823.43 59.16 895.99 130.02 803.78 224.51" fill="#546CA5" fill-opacity="0.16"/>
+  <!-- grafismo: seta da pasta com bolsa (mesma geometria e cores; par azul + escura a 80%) -->
+  <g transform="translate(135 399) scale(0.62)">
+    <polygon points="0 0 -125.997 -122.353 77.047 -330.348 -131.097 -533.516 -19.409 -648.049 67.118 -564.575 314.844 -322.625" fill="#546CA5"/>
+    <polygon transform="translate(-114.816 0)" points="0 0 -125.997 -122.353 77.047 -330.348 -131.097 -533.516 -19.409 -648.049 67.118 -564.575 314.844 -322.625" fill="#2F3547" fill-opacity="0.8"/>
+  </g>
+  <g transform="translate(351 673) scale(0.62)">
+    <polygon points="0 0 -125.997 -122.353 77.047 -330.348 -131.097 -533.516 -19.409 -648.049 67.118 -564.575 314.844 -322.625" fill="#546CA5"/>
+    <polygon transform="translate(110.907 0)" points="0 0 -125.997 -122.353 77.047 -330.348 -131.097 -533.516 -19.409 -648.049 67.118 -564.575 314.844 -322.625" fill="#2F3547" fill-opacity="0.8"/>
+  </g>
   <!-- texto -->
   <text x="640" y="180" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">Contabilidade para empresas</text>
   <text x="640" y="222" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">em crescimento</text>
