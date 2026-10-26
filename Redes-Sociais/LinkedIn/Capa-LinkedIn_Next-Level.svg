@@ -16,10 +16,9 @@
     <polygon transform="translate(110.907 0)" points="0 0 -125.997 -122.353 77.047 -330.348 -131.097 -533.516 -19.409 -648.049 67.118 -564.575 314.844 -322.625" fill="#2F3547" fill-opacity="0.8"/>
   </g>
   <!-- texto -->
-  <text x="640" y="180" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">Contabilidade para empresas</text>
-  <text x="640" y="222" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">em crescimento</text>
-  <rect x="640" y="248" width="56" height="4" fill="#546CA5"/>
-  <text x="640" y="286" fill="#C9D3E6" font-size="15" font-weight="600" letter-spacing="2.2">ESPECIALISTAS EM SIMPLES NACIONAL</text>
+  <text x="640" y="176" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">Contabilidade para empresas</text>
+  <text x="640" y="218" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="-0.5">em crescimento</text>
+  <rect x="640" y="244" width="56" height="4" fill="#546CA5"/>
   <!-- divisor + logotipo negativo -->
   <rect x="1206" y="120" width="2" height="156" fill="#FFFFFF" fill-opacity="0.18"/>
   <svg x="1250" y="117" width="234" height="162" viewBox="40.28 28 852 590">
